@@ -3,10 +3,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./app";
 import reportWebVitals from "./reportWebVitals";
+import { ChartDataProvider } from "./context/chartDataContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ChartDataProvider>
+      <App />
+    </ChartDataProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
