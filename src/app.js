@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="App">
       <div className="side">
+        <h1 className="title">SDG Goals data</h1>
         <div className="control">
           <Goal />
           <Year />

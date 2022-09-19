@@ -6,8 +6,9 @@ import { getChartDataByYear } from "../services";
 
 const initialState = {
   data: [],
-  year: YEARS[0],
+  year: String(YEARS[0]),
   goal: GOALS_LIST[0],
+  toggleInput: "STATE",
   isLoading: false,
   error: null,
 };

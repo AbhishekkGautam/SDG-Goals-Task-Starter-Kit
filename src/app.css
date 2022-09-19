@@ -11,18 +11,27 @@
   display: flex;
 }
 
-.control {
-  background: rgb(250, 217, 223);
+.title {
+  margin: 0;
   padding: 20px;
+  color: dodgerblue;
+}
+
+.control {
+  /* background: rgb(250, 217, 223); */
+  padding: 10px 20px;
   display: flex;
+  gap: 1rem;
 }
 
 .chart {
-  background: rgb(213, 255, 246);
+  /* background: rgb(213, 255, 246); */
   flex-grow: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  margin-top: 3rem;
 }
 
 .map {
@@ -33,12 +42,18 @@
   flex-grow: 1;
 }
 
-.goal,
-.year {
-  width: 50%;
-  margin: 10px;
+.goal {
+  width: 60%;
 }
 
-.side select {
+.goal select {
   width: 100%;
+}
+
+.control select {
+  border: none;
+  border-bottom: 1px solid rgb(141, 141, 141);
+  background: none;
+  padding: 6px;
+  cursor: pointer;
 }
