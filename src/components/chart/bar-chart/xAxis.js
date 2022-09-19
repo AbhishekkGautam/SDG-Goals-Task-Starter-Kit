@@ -4,7 +4,7 @@ import * as d3 from "d3";
 const XAxis = props => {
   const axis = useRef(null);
 
-  const { left, bottom, height, scale, data, ticks, tickLabels } = props;
+  const { height, scale, ticks, tickLabels } = props;
 
   useEffect(() => {
     d3.select(axis.current)

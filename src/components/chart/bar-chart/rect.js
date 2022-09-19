@@ -3,7 +3,7 @@ const colors = d3.scaleOrdinal(d3.schemeCategory10);
 const format = d3.format(".0f");
 
 const Rect = props => {
-  const { height, top, bottom, x, y, data, idx } = props;
+  const { height, x, y, data, idx } = props;
 
   return (
     <g transform={`translate(${x(idx)}, ${y(data?.value)})`}>

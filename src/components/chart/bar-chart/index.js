@@ -6,7 +6,7 @@ import { useChartContext } from "../../../hooks";
 import React from "react";
 
 const BarChart = props => {
-  const { width, height, top, bottom, left, right, data } = props;
+  const { width, height, data } = props;
 
   const {
     state: { goal },
@@ -35,22 +35,12 @@ const BarChart = props => {
     <svg width={width} height={height} style={{ overflow: "visible" }}>
       <XAxis
         scale={x}
-        // top={top}
-        // bottom={bottom}
-        // left={left}
-        // right={right}
         tickLabels={tickLabels}
         ticks={ticks}
         data={data}
         height={height}
       />
-      <YAxis
-        scale={y}
-        // top={top}
-        // bottom={bottom}
-        // left={left}
-        // right={right}
-      />
+      <YAxis scale={y} />
       <g>
         {getChartDataValue.map((data, index) => (
           <React.Fragment key={index}>
@@ -68,14 +58,20 @@ const BarChart = props => {
                 data={data}
                 x={x}
                 y={y}
-                top={top}
-                bottom={bottom}
                 height={height}
               />
             )}
           </React.Fragment>
         ))}
       </g>
+      <text
+        x={-(height / 2)}
+        y={-35}
+        textAnchor="middle"
+        transform="rotate(-90)"
+      >
+        Goal Score
+      </text>
     </svg>
   );
 };

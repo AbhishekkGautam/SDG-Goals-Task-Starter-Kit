@@ -23,20 +23,16 @@ export default function Chart() {
   return (
     <div className="chart">
       <div className="toggle-container">
-        States
+        <span className={state.toggleInput === "STATE" ? "toggle-active" : ""}>
+          States
+        </span>
         <input type="checkbox" id="switch" onChange={toggleHandler} />
         <label htmlFor="switch">Toggle</label>
-        <span>UT</span>
+        <span className={state.toggleInput === "UT" ? "toggle-active" : ""}>
+          UTs
+        </span>
       </div>
-      <BarChart
-        data={filteredChartData}
-        width={450}
-        height={300}
-        // top={20}
-        // bottom={80}
-        // left={30}
-        // right={0}
-      />
+      <BarChart data={filteredChartData} width={460} height={300} />
     </div>
   );
 }

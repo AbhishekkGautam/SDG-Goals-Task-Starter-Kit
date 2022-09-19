@@ -2,14 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./app";
+import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 import { ChartDataProvider } from "./context/chartDataContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ChartDataProvider>
-      <App />
-    </ChartDataProvider>
+    <BrowserRouter>
+      <ChartDataProvider>
+        <App />
+      </ChartDataProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
